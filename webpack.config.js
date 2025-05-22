@@ -28,21 +28,9 @@ module.exports = function (_env, argv) {
     module: {
       rules: [
         {
-          test: /\.(jsx?|tsx?)$/,
-          resolve: {
-            extensions: ['.js', '.jsx', '.ts', '.tsx'],
-          },
-          exclude: /(node_modules)/,
-          use: [
-            {
-              loader: 'babel-loader',
-              options: {
-                cacheDirectory: true,
-                cacheCompression: false,
-                envName: isProduction ? 'production' : 'development',
-              },
-            },
-          ],
+          test: /\.(ts|tsx)$/,
+          exclude: /node_modules/,
+          use: 'ts-loader',
         },
         {
           test: /\.css$/,

@@ -7,7 +7,7 @@
   "host": [
     {
       "app": "ID",
-      "minVersion": "19.1.0"
+      "minVersion": "20.3.1"
     }
   ],
   "featureFlags": {
