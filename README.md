@@ -1,3 +1,3 @@
-# UXP Indesign React Typescript Firebase Starter
+# UXP Indesign React Typescript Starter
 
-Remember: Don't use anything from firebase sdk except Auth and simple ref's. Use custom api to listen to realtime database with streaming.
+A starter template with webpack configured for creating Indesign Plugins with UXP
