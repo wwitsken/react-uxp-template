@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import React from 'react';
 import { entrypoints } from 'uxp';
 import Panel1 from './panels/Panel1';
@@ -23,7 +23,9 @@ entrypoints.setup({
       show() {
         return new Promise<void>((resolve) => {
           console.log('showed panel 1');
-          ReactDOM.render(<Panel1 />, document.getElementById('root'));
+          const container = document.getElementById('root');
+          const root = createRoot(container);
+          root.render(<Panel1 />);
           resolve();
         });
       },
